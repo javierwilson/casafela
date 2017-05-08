@@ -105,7 +105,9 @@
             </li>
         {% endfor %}
     {% endif %}        
-								<li><a href="index-4.html">CONTACTS</a></li>
+								<li><a href="#gallery">GALLERY</a></li>
+								<li><a href="#booking">BOOKING</a></li>
+								<li><a href="#contact">CONTACT</a></li>
 							</ul>
 						</nav>
 						<div class="clear"></div>
@@ -126,28 +128,28 @@
 			<div id="camera_wrap" class="">
 				<div data-src="{% static 'images/slide_habana_oscar_wilson.jpg' %}">
 					<div class="caption fadeIn">
-						<h2>El Vedado, Habana</h2>
+						<h2>Habana</h2>
 						<div class="price">
-							POR
+							EL VEDADO, por
 							<span>$25 / noche</span>
 						</div>
-						<a href="#">Más información</a>
+						<a href="#more">Más información</a>
 					</div>
 				</div>
 				<div data-src="{% static 'images/slide1_habana_oscar_wilson.jpg' %}">
 					<div class="caption fadeIn">
-						<h2>El Vedado, Habana</h2>
+						<h2>Habana</h2>
 						<div class="price">
-							PARA DOS PERSONAS
+							EL VEDADO, dos personas
 							<span>$50 / noche</span>
 						</div>
-						<a href="#">Más información</a>
+						<a href="#more">Más información</a>
 					</div>
 				</div>
                 <!--
 				<div data-src="{% static 'images/slide2.jpg' %}">
 					<div class="caption fadeIn">
-						<h2>El Vedado, Habana</h2>
+						<h2>EL VEDADO, Habana</h2>
 						<div class="price">
 							PARA TRES PERSONAS
 							<span>$60 / noche</span>
@@ -159,6 +161,8 @@
 			</div>
 		</div>
 <!--==============================Content=================================-->
+<a name="more"></a>
+<a name="gallery"></a>
 		<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
 			<div class="container_12">
 
@@ -167,16 +171,18 @@
 				<div class="clear"></div>
 				<div class="grid_6">
 
-                    {% block content_left %}{% endblock %}
+<a name="booking"></a>
+                    {% block content_left %}{% include "booking.html" %}{% endblock %}
 
 				</div>
 				<div class="grid_5 prefix_1">
 
-                    {% block content_right %}{% endblock %}
+                    {% block content_right %}{% include "map.html" %}{% endblock %}
 
 				</div>
 
-                {% block content_down %}{% endblock %}
+<a name="contact"></a>
+                {% block content_down %}{% include "contact.html" %}{% endblock %}
 			</div>
 		</div>
 <!--==============================footer=================================-->
@@ -184,9 +190,11 @@
 			<div class="container_12">
 				<div class="grid_12">
 					<div class="socials">
+                    <!--
 						<a href="#" class="fa fa-facebook"></a>
 						<a href="#" class="fa fa-twitter"></a>
 						<a href="#" class="fa fa-google-plus"></a>
+                    -->
 					</div>
 					<div class="copy">
 						Your Trip (c) 2014 | <a href="#">Privacy Policy</a> | Website Template Designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>

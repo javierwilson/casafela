@@ -1,4 +1,4 @@
-					<h3>Booking Form</h3>
+					<h3>RESERVACIONES</h3>
 					<form id="bookingForm">
 						<div class="fl1">
 							<div class="tmInput">
@@ -12,9 +12,6 @@
 							<div class="tmInput">
 								<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
 							</div>
-							<div class="tmInput mr0">
-								<input name="Hotel" placeHolder="Hotel:" type="text" data-constraints="@NotEmpty @Required">
-							</div>
 						</div>
 						<div class="clear"></div>
 						<strong>Check-in</strong>
@@ -27,16 +24,6 @@
 							<input type="text" name="Check-out" placeHolder='20/05/2014' data-constraints="@NotEmpty @Required @Date">
 						</label>
 						<div class="clear"></div>
-						<div class="tmRadio">
-							<p>Comfort</p>
-							<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
-							<span>Cheap</span>
-							<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
-							<span>Standart</span>
-							<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
-							<span>Lux</span>
-						</div>
-						<div class="clear"></div>
 						<div class="fl1 fl2">
 							<em>Adults</em>
 							<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
@@ -46,13 +33,6 @@
 								<option>3</option>
 							</select>
 							<div class="clear"></div>
-							<em>Rooms</em>
-							<select name="Rooms" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
-								<option>1</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-							</select>
 						</div>
 						<div class="fl1 fl2">
 							<em>Children</em>

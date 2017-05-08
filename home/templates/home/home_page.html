@@ -1,16 +1,19 @@
 {% extends "base.html" %}
 {% load wagtailimages_tags %}
-
 {% load wagtailcore_tags %}
+{% load wagtailsimplegallery_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    {{ page.body|richtext }}
+  {{ page.body|richtext }}
+  {% simple_gallery collection="Apartamento" %}
+  <!--
   {% for img in images %}
-    {% image img width-260 as img_thumb %}
+    {% image img fill-260x195 as img_thumb %}
     <span class="gallery-thumbnail-container">
         <img src="{{ img_thumb.url }}" alt="{{ img_thumb.alt }}" class="gallery-thumbnail">
     </span>
   {% endfor %}
+  -->
 {% endblock %}
